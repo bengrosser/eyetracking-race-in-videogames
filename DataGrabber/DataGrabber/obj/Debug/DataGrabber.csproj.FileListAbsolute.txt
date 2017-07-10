@@ -1,0 +1,12 @@
+c:\users\cts\documents\visual studio 2017\Projects\DataGrabber\DataGrabber\bin\Debug\DataGrabber.exe.config
+c:\users\cts\documents\visual studio 2017\Projects\DataGrabber\DataGrabber\bin\Debug\DataGrabber.exe
+c:\users\cts\documents\visual studio 2017\Projects\DataGrabber\DataGrabber\bin\Debug\DataGrabber.pdb
+c:\users\cts\documents\visual studio 2017\Projects\DataGrabber\DataGrabber\obj\Debug\DataGrabber.csprojResolveAssemblyReference.cache
+c:\users\cts\documents\visual studio 2017\Projects\DataGrabber\DataGrabber\obj\Debug\DataGrabber.DataGrabberWindow.resources
+c:\users\cts\documents\visual studio 2017\Projects\DataGrabber\DataGrabber\obj\Debug\DataGrabber.Properties.Resources.resources
+c:\users\cts\documents\visual studio 2017\Projects\DataGrabber\DataGrabber\obj\Debug\DataGrabber.csproj.GenerateResource.Cache
+c:\users\cts\documents\visual studio 2017\Projects\DataGrabber\DataGrabber\obj\Debug\DataGrabber.exe
+c:\users\cts\documents\visual studio 2017\Projects\DataGrabber\DataGrabber\obj\Debug\DataGrabber.pdb
+c:\users\cts\documents\visual studio 2017\Projects\DataGrabber\DataGrabber\bin\Debug\Tobii.EyeX.Client.dll
+c:\users\cts\documents\visual studio 2017\Projects\DataGrabber\DataGrabber\bin\Debug\Tobii.Interaction.Model.dll
+c:\users\cts\documents\visual studio 2017\Projects\DataGrabber\DataGrabber\bin\Debug\Tobii.Interaction.Net.dll
