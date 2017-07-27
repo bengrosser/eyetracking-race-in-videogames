@@ -36,13 +36,17 @@
             this.process1 = new System.Diagnostics.Process();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.InProgressGB = new System.Windows.Forms.GroupBox();
-            this.PointsBox = new System.Windows.Forms.TextBox();
+            this.saccadeBox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.fixateBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.TimeBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.DataGB = new System.Windows.Forms.GroupBox();
+            this.checkBox = new System.Windows.Forms.TextBox();
             this.AddSepButton = new System.Windows.Forms.Button();
             this.SaveButton = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.AnalyzeGB.SuspendLayout();
             this.InProgressGB.SuspendLayout();
             this.DataGB.SuspendLayout();
@@ -63,12 +67,13 @@
             // 
             // StartOverButton
             // 
-            this.StartOverButton.Location = new System.Drawing.Point(33, 83);
+            this.StartOverButton.Location = new System.Drawing.Point(189, 41);
             this.StartOverButton.Name = "StartOverButton";
             this.StartOverButton.Size = new System.Drawing.Size(75, 23);
             this.StartOverButton.TabIndex = 3;
             this.StartOverButton.Text = "Start Over";
             this.StartOverButton.UseVisualStyleBackColor = true;
+            this.StartOverButton.Click += new System.EventHandler(this.StartOverButton_Click);
             // 
             // StopButton
             // 
@@ -82,12 +87,13 @@
             // 
             // PauseButton
             // 
-            this.PauseButton.Location = new System.Drawing.Point(189, 40);
+            this.PauseButton.Location = new System.Drawing.Point(33, 83);
             this.PauseButton.Name = "PauseButton";
             this.PauseButton.Size = new System.Drawing.Size(75, 23);
             this.PauseButton.TabIndex = 1;
             this.PauseButton.Text = "Pause";
             this.PauseButton.UseVisualStyleBackColor = true;
+            this.PauseButton.Click += new System.EventHandler(this.PauseButton_Click);
             // 
             // StartButton
             // 
@@ -111,7 +117,9 @@
             // 
             // InProgressGB
             // 
-            this.InProgressGB.Controls.Add(this.PointsBox);
+            this.InProgressGB.Controls.Add(this.saccadeBox);
+            this.InProgressGB.Controls.Add(this.label3);
+            this.InProgressGB.Controls.Add(this.fixateBox);
             this.InProgressGB.Controls.Add(this.label2);
             this.InProgressGB.Controls.Add(this.TimeBox);
             this.InProgressGB.Controls.Add(this.label1);
@@ -122,23 +130,41 @@
             this.InProgressGB.TabStop = false;
             this.InProgressGB.Text = "In Progress";
             // 
-            // PointsBox
+            // saccadeBox
             // 
-            this.PointsBox.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.PointsBox.Location = new System.Drawing.Point(146, 48);
-            this.PointsBox.Name = "PointsBox";
-            this.PointsBox.ReadOnly = true;
-            this.PointsBox.Size = new System.Drawing.Size(85, 20);
-            this.PointsBox.TabIndex = 3;
+            this.saccadeBox.Cursor = System.Windows.Forms.Cursors.Default;
+            this.saccadeBox.Location = new System.Drawing.Point(233, 48);
+            this.saccadeBox.Name = "saccadeBox";
+            this.saccadeBox.ReadOnly = true;
+            this.saccadeBox.Size = new System.Drawing.Size(66, 20);
+            this.saccadeBox.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(172, 51);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Saccades:";
+            // 
+            // fixateBox
+            // 
+            this.fixateBox.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.fixateBox.Location = new System.Drawing.Point(75, 48);
+            this.fixateBox.Name = "fixateBox";
+            this.fixateBox.ReadOnly = true;
+            this.fixateBox.Size = new System.Drawing.Size(66, 20);
+            this.fixateBox.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(75, 51);
+            this.label2.Location = new System.Drawing.Point(18, 51);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 13);
+            this.label2.Size = new System.Drawing.Size(51, 13);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Data Points:";
+            this.label2.Text = "Fixations:";
             // 
             // TimeBox
             // 
@@ -160,14 +186,23 @@
             // 
             // DataGB
             // 
+            this.DataGB.Controls.Add(this.label4);
+            this.DataGB.Controls.Add(this.checkBox);
             this.DataGB.Controls.Add(this.AddSepButton);
             this.DataGB.Controls.Add(this.SaveButton);
             this.DataGB.Location = new System.Drawing.Point(13, 250);
             this.DataGB.Name = "DataGB";
-            this.DataGB.Size = new System.Drawing.Size(313, 83);
+            this.DataGB.Size = new System.Drawing.Size(313, 122);
             this.DataGB.TabIndex = 2;
             this.DataGB.TabStop = false;
             this.DataGB.Text = "Data";
+            // 
+            // checkBox
+            // 
+            this.checkBox.Location = new System.Drawing.Point(73, 84);
+            this.checkBox.Name = "checkBox";
+            this.checkBox.Size = new System.Drawing.Size(224, 20);
+            this.checkBox.TabIndex = 2;
             // 
             // AddSepButton
             // 
@@ -177,34 +212,45 @@
             this.AddSepButton.TabIndex = 1;
             this.AddSepButton.Text = "Segment Data";
             this.AddSepButton.UseVisualStyleBackColor = true;
+            this.AddSepButton.Click += new System.EventHandler(this.AddSepButton_Click);
             // 
             // SaveButton
             // 
             this.SaveButton.Location = new System.Drawing.Point(189, 38);
             this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(75, 23);
+            this.SaveButton.Size = new System.Drawing.Size(91, 23);
             this.SaveButton.TabIndex = 0;
-            this.SaveButton.Text = "Save Data";
+            this.SaveButton.Text = "Validate Data";
             this.SaveButton.UseVisualStyleBackColor = true;
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(14, 87);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(56, 13);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Validation:";
             // 
             // DataGrabberWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(338, 345);
+            this.ClientSize = new System.Drawing.Size(338, 384);
             this.Controls.Add(this.DataGB);
             this.Controls.Add(this.InProgressGB);
             this.Controls.Add(this.AnalyzeGB);
             this.MaximizeBox = false;
             this.Name = "DataGrabberWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Data Grabber";
+            this.Text = "DataGrabber";
             this.TopMost = true;
             this.AnalyzeGB.ResumeLayout(false);
             this.InProgressGB.ResumeLayout(false);
             this.InProgressGB.PerformLayout();
             this.DataGB.ResumeLayout(false);
+            this.DataGB.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -224,8 +270,12 @@
         private System.Windows.Forms.TextBox TimeBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
-        private System.Windows.Forms.TextBox PointsBox;
+        private System.Windows.Forms.TextBox fixateBox;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox checkBox;
+        private System.Windows.Forms.TextBox saccadeBox;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
 
