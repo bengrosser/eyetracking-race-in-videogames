@@ -1,0 +1,9 @@
+C:\Users\CTS\Documents\Visual Studio 2017\Projects\PatternDetector\PatternDetector\bin\Debug\PatternDetector.exe.config
+C:\Users\CTS\Documents\Visual Studio 2017\Projects\PatternDetector\PatternDetector\bin\Debug\PatternDetector.exe
+C:\Users\CTS\Documents\Visual Studio 2017\Projects\PatternDetector\PatternDetector\bin\Debug\PatternDetector.pdb
+C:\Users\CTS\Documents\Visual Studio 2017\Projects\PatternDetector\PatternDetector\obj\Debug\PatternDetector.csprojResolveAssemblyReference.cache
+C:\Users\CTS\Documents\Visual Studio 2017\Projects\PatternDetector\PatternDetector\obj\Debug\PatternDetector.Form1.resources
+C:\Users\CTS\Documents\Visual Studio 2017\Projects\PatternDetector\PatternDetector\obj\Debug\PatternDetector.Properties.Resources.resources
+C:\Users\CTS\Documents\Visual Studio 2017\Projects\PatternDetector\PatternDetector\obj\Debug\PatternDetector.csproj.GenerateResource.Cache
+C:\Users\CTS\Documents\Visual Studio 2017\Projects\PatternDetector\PatternDetector\obj\Debug\PatternDetector.exe
+C:\Users\CTS\Documents\Visual Studio 2017\Projects\PatternDetector\PatternDetector\obj\Debug\PatternDetector.pdb
